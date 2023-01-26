@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Slot child demo passing HTML">
+        <div class="slds-m-around_medium">
+            <c-slot-child-demo>
+                <!--This will go inside a child component-->
+                <p class="sldx-text-color_success" slot="name">My name is Kaushik Kishore</p>
+                <p class="sldx-text-color_error" slot="age">My age is 20</p>
+                <p slot="footer">This is footer text</p>
+            </c-slot-child-demo>
+
+
+            <c-slot-child-demo>
+                <!--This will go inside a child component-->
+                <p class="sldx-text-color_success" slot="name">My name is Tobias</p>
+                <p class="sldx-text-color_error" slot="age">My age is 20</p>
+
+            </c-slot-child-demo>
+        </div>
+    </lightning-card>
+</template>

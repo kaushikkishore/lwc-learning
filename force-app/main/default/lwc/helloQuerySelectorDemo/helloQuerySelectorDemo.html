@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Parent component">
+        <div class="slds-m-around_medium">
+            <h1>Hello from a Parent component</h1>
+
+            <template for:each={users} for:item="user">
+                <div key={user} class="name">{user}</div>
+            </template>
+
+            <div class="child" lwc:dom="manual"></div>
+
+            <lightning-button variant="brand" label="Print" title="Print above text in console" onclick={handleClick}
+                class="slds-m-left_x-medium"></lightning-button>
+        </div>
+    </lightning-card>
+</template>

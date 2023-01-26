@@ -1,0 +1,12 @@
+<aura:component implements="flexipage:availableForAllPageTypes,lightning:isUrlAddressable" access="global">
+    <aura:attribute name="id" type="String" />
+    <aura:attribute name="username" type="String" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.onload}" />
+
+    <div class="slds-card">
+        <div>This is from LWC ID {!v.id}</div>
+        <div>This is from LWC username {!v.username}</div>
+    </div>
+
+</aura:component>
