@@ -1,6 +1,6 @@
 <template>
   <lightning-card title="For loop">
-    <div class="slds-m-around_medium">
+    <div class="slds-var-m-around_medium">
       <ul class="slds-has-dividers_around-space">
         <template for:each={cars} for:item="car" for:index="index">
           <li key={car} class="slds-item">{car}</li>
@@ -10,7 +10,7 @@
   </lightning-card>
 
   <lightning-card title="For loop with Object">
-    <div class="slds-m-around_medium">
+    <div class="slds-var-m-around_medium">
       <ul class="slds-has-dividers_around-space">
         <template for:each={ceos} for:item="ceoItem" for:index="index">
           <li key={ceoItem.id} class="slds-item">
@@ -22,7 +22,7 @@
   </lightning-card>
 
   <lightning-card title="Iterator loop">
-    <div class="slds-m-around_medium">
+    <div class="slds-var-m-around_medium">
       <ul class="slds-has-dividers_around-space">
         <template iterator:ceo={ceos}>
           <template if:true={ceo.first}>
