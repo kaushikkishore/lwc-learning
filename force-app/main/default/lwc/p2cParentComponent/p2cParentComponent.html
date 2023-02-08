@@ -1,33 +1,39 @@
 <template>
-    <c-p2c-alert-component message="This is coming from the parent part" card-heading="Card heading as param passed"
-        number="20" is-valid="false"></c-p2c-alert-component>
+  <c-p2c-alert-component
+    message="This is coming from the parent part"
+    card-heading="Card heading as param passed"
+    number="20"
+    is-valid="false"
+  ></c-p2c-alert-component>
 
+  <c-p2c-carousel-component carousals={carousals}></c-p2c-carousel-component>
 
-    <c-p2c-carousel-component carousals={carousals}></c-p2c-carousel-component>
+  <lightning-card title="On Action pass">
+    <div class="slds-m-around_medium">
+      <lightning-input
+        type="number"
+        label="Enter percentage"
+        value={progressPercentage}
+        onkeyup={handleChange}
+      ></lightning-input>
+      <c-p2c-progress-component
+        progress-percentage={progressPercentage}
+      ></c-p2c-progress-component>
+    </div>
+  </lightning-card>
 
+  <!-- SLIDER Comp-->
 
-    <lightning-card title="On Action pass">
-        <div class="slds-m-around_medium">
-            <lightning-input type="number" label="Enter percentage" value={progressPercentage}
-                onkeyup={handleChange}></lightning-input>
-            <c-p2c-progress-component progress-percentage={progressPercentage}></c-p2c-progress-component>
-        </div>
-    </lightning-card>
+  <lightning-card title="Slider action from parent">
+    <div class="slds-m-around_medium">
+      <lightning-button
+        variant="brand"
+        label="Reset slider"
+        onclick={handleButtonCLickToResetSlider}
+        class="slds-m-left_x-small"
+      ></lightning-button>
 
-
-    <!-- SLIDER Comp-->
-
-    <lightning-card title="Slider action from parent">
-        <div class="slds-m-around_medium">
-            <lightning-button variant="brand" label="Reset slider" onclick={handleButtonCLickToResetSlider}
-                class="slds-m-left_x-small"></lightning-button>
-
-            <c-p2c-slider-component></c-p2c-slider-component>
-        </div>
-    </lightning-card>
-
-
-
-
-
+      <c-p2c-slider-component></c-p2c-slider-component>
+    </div>
+  </lightning-card>
 </template>

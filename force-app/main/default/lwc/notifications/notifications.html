@@ -1,19 +1,38 @@
 <template>
-    <lightning-card title="Record ID and Object Names">
-        <div class="slds-m-around_medium">
+  <lightning-card title="Record ID and Object Names">
+    <div class="slds-m-around_medium">
+      <lightning-button
+        variant="brand"
+        label="Show success"
+        toasttype="success"
+        title="Show success toast"
+        onclick={toastSuccess}
+        class="slds-m-left_x-small"
+      ></lightning-button>
 
-            <lightning-button variant="brand" label="Show success" toasttype="success" title="Show success toast"
-                onclick={toastSuccess} class="slds-m-left_x-small"></lightning-button>
+      <lightning-button
+        variant="destructive"
+        toasttype="error"
+        label="Show error"
+        onclick={toastError}
+        class="slds-m-left_x-small"
+      ></lightning-button>
 
-            <lightning-button variant="destructive" toasttype="error" label="Show error" onclick={toastError}
-                class="slds-m-left_x-small"></lightning-button>
+      <lightning-button
+        variant="destructive-text"
+        toasttype="warning"
+        label="Show warning"
+        onclick={toastWarning}
+        class="slds-m-left_x-small"
+      ></lightning-button>
 
-            <lightning-button variant="destructive-text" toasttype="warning" label="Show warning" onclick={toastWarning}
-                class="slds-m-left_x-small"></lightning-button>
-
-            <lightning-button variant="success" toasttype="info" label="Show Info" onclick={toastInfo}
-                class="slds-m-left_x-small"></lightning-button>
-
-        </div>
-    </lightning-card>
+      <lightning-button
+        variant="success"
+        toasttype="info"
+        label="Show Info"
+        onclick={toastInfo}
+        class="slds-m-left_x-small"
+      ></lightning-button>
+    </div>
+  </lightning-card>
 </template>

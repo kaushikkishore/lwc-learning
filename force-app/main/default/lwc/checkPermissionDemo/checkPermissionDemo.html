@@ -1,33 +1,29 @@
 <template>
-    <lightning-card title="Check permission demo">
-        <div class="slds-m-around_medium">
-
-            <template if:true={hadViewAllDataAvailable}>
-                <div class="slds-p-around_medium">
-                    Congratulations you have access!!
-                </div>
-            </template>
-
-            <template if:false={hadViewAllDataAvailable}>
-                <div class="slds-p-around_medium">
-                    Oops! you do not have access to this page!!
-                </div>
-            </template>
-
-
-            <template if:true={hasCustomDetailsPermissions}>
-                <div class="slds-p-around_medium">
-                    Congratulations you have custom permissions access!!
-                </div>
-            </template>
-
-            <template if:false={hasCustomDetailsPermissions}>
-                <div class="slds-p-around_medium">
-                    Oops! you do not have custom permissions access to this page!!
-                </div>
-            </template>
-
-
+  <lightning-card title="Check permission demo">
+    <div class="slds-m-around_medium">
+      <template if:true={hadViewAllDataAvailable}>
+        <div class="slds-p-around_medium">
+          Congratulations you have access!!
         </div>
-    </lightning-card>
+      </template>
+
+      <template if:false={hadViewAllDataAvailable}>
+        <div class="slds-p-around_medium">
+          Oops! you do not have access to this page!!
+        </div>
+      </template>
+
+      <template if:true={hasCustomDetailsPermissions}>
+        <div class="slds-p-around_medium">
+          Congratulations you have custom permissions access!!
+        </div>
+      </template>
+
+      <template if:false={hasCustomDetailsPermissions}>
+        <div class="slds-p-around_medium">
+          Oops! you do not have custom permissions access to this page!!
+        </div>
+      </template>
+    </div>
+  </lightning-card>
 </template>

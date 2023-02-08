@@ -1,0 +1,39 @@
+<template>
+    <lightning-card title="Record View form demo">
+        <div class="slds-m-around_medium">
+            <lightning-record-edit-form object-api-name={objectName}>
+                <lightning-messages></lightning-messages>
+                <lightning-input-field field-name={fields.CONTACT_TITLE}> </lightning-input-field>
+                <lightning-input-field field-name={fields.CONTACT_NAME}> </lightning-input-field>
+                <lightning-input-field field-name={fields.CONTACT_PHONE}> </lightning-input-field>
+                <lightning-input-field field-name={fields.CONTACT_EMAIL}> </lightning-input-field>
+                <label class="slds-p-left_x-small">Search your account here</label>
+                <lightning-input-field variant="label-hidden" field-name={fields.CONTACT_ACCOUNT_ID}>
+                </lightning-input-field>
+                <lightning-button onclick={handleReset} class="slds-m-around_xx-small" label="Cancel">
+                </lightning-button>
+                <lightning-button class="slds-m-around_xx-small" type="submit" variant="brnad" label="Save">
+                </lightning-button>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+    <!-- ACCOUNT ID 0016D00000vgJpKQAU -->
+
+    <lightning-card title="Record Edit form">
+        <div class="slds-m-around_medium">
+            <lightning-record-edit-form record-id="0036D00000hsLv8QAE" object-api-name={objectName}>
+                <lightning-messages></lightning-messages>
+                <lightning-input-field field-name={fields.CONTACT_TITLE}> </lightning-input-field>
+                <lightning-input-field field-name={fields.CONTACT_NAME}> </lightning-input-field>
+                <lightning-input-field field-name={fields.CONTACT_PHONE}> </lightning-input-field>
+                <lightning-input-field field-name={fields.CONTACT_EMAIL}> </lightning-input-field>
+                <lightning-input-field field-name={fields.CONTACT_ACCOUNT_ID}> </lightning-input-field>
+                <lightning-button onclick={handleReset} class="slds-m-around_xx-small" label="Cancel">
+                </lightning-button>
+                <lightning-button class="slds-m-around_xx-small" type="submit" variant="brnad" label="Save">
+                </lightning-button>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+
+</template>

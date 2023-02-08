@@ -1,17 +1,13 @@
 <template>
-    <lightning-card title="Child to parent communication">
-        <div class="slds-m-around_medium">
+  <lightning-card title="Child to parent communication">
+    <div class="slds-m-around_medium">
+      <lightning-button variant="brand" label="Open modal" onclick={openModal}>
+      </lightning-button>
+      <h3>{message}</h3>
 
-            <lightning-button variant="brand" label="Open modal" onclick={openModal}>
-
-            </lightning-button>
-            <h3>{message}</h3>
-
-            <template if:true={showModal}>
-                <c-c2p-modal-component onclose={closeModal}></c-c2p-modal-component>
-            </template>
-
-        </div>
-
-    </lightning-card>
+      <template if:true={showModal}>
+        <c-c2p-modal-component onclose={closeModal}></c-c2p-modal-component>
+      </template>
+    </div>
+  </lightning-card>
 </template>

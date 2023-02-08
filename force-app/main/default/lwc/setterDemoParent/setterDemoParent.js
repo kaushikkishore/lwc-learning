@@ -1,8 +1,8 @@
-import { LightningElement } from 'lwc';
+import { LightningElement } from "lwc";
 
 export default class SetterDemoParent extends LightningElement {
-    userDetails = {
-        name: 'Kaushik Kishore',
-        age: 31
-    }
+  userDetails = {
+    name: "Kaushik Kishore",
+    age: 31
+  };
 }

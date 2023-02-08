@@ -1,15 +1,14 @@
 p {
-    color: blue;
-    font-size: 12px;
-    border: 1px solid red;
+  color: blue;
+  font-size: 12px;
+  border: 1px solid red;
 }
 
 .user {
-    color: pink;
-
+  color: pink;
 }
 
 .user:hover {
-    font-size: 15px;
-    color: red;
+  font-size: 15px;
+  color: red;
 }

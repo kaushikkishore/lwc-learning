@@ -4,12 +4,19 @@
             <template if:true={accounts}>
                 <template for:each={accounts.data} for:item="acc">
                     <div key={acc.Id} class="slds-box slds-box_xx-small">
-                        <div>Account Name <strong>{acc.Name}</strong></div>
-                        <div>Account Type <strong>{acc.Type}</strong></div>
+                        <div>
+                            Account Name <strong>{acc.Name}</strong>
+                        </div>
+                        <div>
+                            Account Type <strong>{acc.Type}</strong>
+                        </div>
 
-                        <div>Account Industry <strong>{acc.Industry}</strong></div>
+                        <div>
+                            Account Industry <strong>{acc.Industry}</strong>
+                        </div>
                     </div>
                 </template>
+
             </template>
         </div>
     </lightning-card>

@@ -1,8 +1,9 @@
-import { LightningElement } from "lwc";
-const EXTERNAL_URL = "https://www.googleapis.com/books/v1/volumes?q=first";
+import { LightningElement } from 'lwc';
+const EXTERNAL_URL = 'https://www.googleapis.com/books/v1/volumes?q=first'
 export default class BookAppBasedOnExternalAPI extends LightningElement {
     connectedCallback() {
         this.fetchBooks();
+
     }
 
     async fetchBooks() {
@@ -15,5 +16,6 @@ export default class BookAppBasedOnExternalAPI extends LightningElement {
         } catch (e) {
             console.error(e);
         }
+
     }
 }

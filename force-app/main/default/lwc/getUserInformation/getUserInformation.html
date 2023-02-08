@@ -1,16 +1,10 @@
 <template>
-    <lightning-card title="Form factor demo">
-        <div class="slds-m-around_medium">
+  <lightning-card title="Form factor demo">
+    <div class="slds-m-around_medium">
+      <p>User ID : {userId}</p>
+      <template if:true={isGuesUser}> You are a guest user! </template>
 
-            <p>User ID : {userId}</p>
-            <template if:true={isGuesUser}>
-                You are a guest user!
-            </template>
-
-            <template if:false={isGuesUser}>
-                You are a loggedin user!
-            </template>
-
-        </div>
-    </lightning-card>
+      <template if:false={isGuesUser}> You are a loggedin user! </template>
+    </div>
+  </lightning-card>
 </template>

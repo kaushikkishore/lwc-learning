@@ -1,7 +1,7 @@
-import { LightningElement, api } from 'lwc';
+import { LightningElement, api } from "lwc";
 
 export default class NaviagteToTargetComponent extends LightningElement {
-    @api recordId;
-    @api firstName;
-    @api lastName;
+  @api recordId;
+  @api firstName;
+  @api lastName;
 }

@@ -1,19 +1,21 @@
 <template>
-    <lightning-card title="Conditional rendering">
-        <div class="slds-m-around_medium">
+  <lightning-card title="Conditional rendering">
+    <div class="slds-m-around_medium">
+      <lightning-button
+        variant={variant}
+        label="Click me!"
+        title="Click to change page"
+        onclick={handleClick}
+        class="slds-m-left_x-small"
+      ></lightning-button>
 
-            <lightning-button variant={variant} label="Click me!" title="Click to change page" onclick={handleClick}
-                class="slds-m-left_x-small"></lightning-button>
+      <template if:true={isVisible}>
+        <div>True state template - {isVisible}</div>
+      </template>
 
-            <template if:true={isVisible}>
-                <div>True state template - {isVisible}</div>
-            </template>
-
-            <template if:false={isVisible}>
-                <div>False state template - {isVisible}</div>
-            </template>
-
-
-        </div>
-    </lightning-card>
+      <template if:false={isVisible}>
+        <div>False state template - {isVisible}</div>
+      </template>
+    </div>
+  </lightning-card>
 </template>

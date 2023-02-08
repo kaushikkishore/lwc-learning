@@ -1,6 +1,6 @@
-@import 'c/cssLibrary';
+@import "c/cssLibrary";
 
 .html {
-    width: 90%;
-    background-color: green;
+  width: 90%;
+  background-color: green;
 }

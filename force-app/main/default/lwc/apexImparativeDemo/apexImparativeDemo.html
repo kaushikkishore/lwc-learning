@@ -1,0 +1,54 @@
+<template>
+    <lightning-card title="APEX imperative demo">
+        <div class="slds-m-around_medium">
+            <lightning-button variant="brand" label="Get accounts" name="" onclick={fetchAccounts}></lightning-button>
+        </div>
+        <div class="slds-m-around_medium">
+            <template if:true={accounts}>
+                <template for:each={accounts} for:item="acc">
+                    <div key={acc.Id} class="slds-box slds-box_xx-small">
+                        <div>
+                            Account Name <strong>{acc.Name}</strong>
+                        </div>
+                        <div>
+                            Account Type <strong>{acc.Type}</strong>
+                        </div>
+
+                        <div>
+                            Account Industry <strong>{acc.Industry}</strong>
+                        </div>
+                    </div>
+                </template>
+
+            </template>
+        </div>
+    </lightning-card>
+
+
+    <lightning-card title="APEX imperative demo Async Await">
+        <div class="slds-m-around_medium">
+            <lightning-button variant="brand" label="Get accounts" name=""
+                onclick={fetchWithAsyncAwait}></lightning-button>
+        </div>
+        <div class="slds-m-around_medium">
+            <template if:true={accountsAwait}>
+                <template for:each={accountsAwait} for:item="acc">
+                    <div key={acc.Id} class="slds-box slds-box_xx-small">
+                        <div>
+                            Account Name <strong>{acc.Name}</strong>
+                        </div>
+                        <div>
+                            Account Type <strong>{acc.Type}</strong>
+                        </div>
+
+                        <div>
+                            Account Industry <strong>{acc.Industry}</strong>
+                        </div>
+                    </div>
+                </template>
+
+            </template>
+        </div>
+    </lightning-card>
+
+</template>

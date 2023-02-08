@@ -1,12 +1,12 @@
-import { LightningElement, api } from 'lwc';
+import { LightningElement, api } from "lwc";
 
 export default class P2cSliderComponent extends LightningElement {
-    val = 20;
-    onChangeHandler(event) {
-        this.val = event.target.value;
-    }
+  val = 20;
+  onChangeHandler(event) {
+    this.val = event.target.value;
+  }
 
-    @api resetSlider(value) {
-        this.val = value;
-    }
+  @api resetSlider(value) {
+    this.val = value;
+  }
 }

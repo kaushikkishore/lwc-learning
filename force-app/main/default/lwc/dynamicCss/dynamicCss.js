@@ -1,12 +1,12 @@
-import { LightningElement } from 'lwc';
+import { LightningElement } from "lwc";
 
 export default class DynamicCss extends LightningElement {
-    percent = 10;
-    handleText(event) {
-        this.percent = event.target.value;
-    }
+  percent = 10;
+  handleText(event) {
+    this.percent = event.target.value;
+  }
 
-    get getPercentage() {
-        return `width: ${this.percent}%`
-    }
+  get getPercentage() {
+    return `width: ${this.percent}%`;
+  }
 }

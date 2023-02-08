@@ -1,16 +1,19 @@
 <template>
-    <lightning-card title="Parent card">
-        <div class="sldx-m-around_medium">
-            <div>This is parent</div>
+  <lightning-card title="Parent card">
+    <div class="sldx-m-around_medium">
+      <div>This is parent</div>
 
-            <lightning-button variant="brand-outline" label="Toggle" title="Primary action with lighter look"
-                onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+      <lightning-button
+        variant="brand-outline"
+        label="Toggle"
+        title="Primary action with lighter look"
+        onclick={handleClick}
+        class="slds-m-left_x-small"
+      ></lightning-button>
 
-
-            <template if:true={showChild}>
-                <c-lifecycle-child></c-lifecycle-child>
-            </template>
-
-        </div>
-    </lightning-card>
+      <template if:true={showChild}>
+        <c-lifecycle-child></c-lifecycle-child>
+      </template>
+    </div>
+  </lightning-card>
 </template>

@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Record Edit custom validation">
+        <div class="slds-m-around_medium">
+            <lightning-record-edit-form onsubmit={handleSubmit} onsuccess={successHandler} onerror={handleError}
+                object-api-name={objectName}>
+
+
+                <lightning-input label="Name" value={accountName} onkeyup={handleChange}
+                    class="slds-m-bottom_x-small"></lightning-input>
+
+                <!-- <lightning-button onclick={handleReset} class="slds-m-around_xx-small" label="Cancel">
+                </lightning-button> -->
+
+                <lightning-button class="slds-m-around_xx-small" type="submit" variant="brand" label="Create Acccount">
+                </lightning-button>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+</template>

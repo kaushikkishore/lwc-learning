@@ -1,6 +1,5 @@
-import { api, LightningElement } from 'lwc';
+import { api, LightningElement } from "lwc";
 
 export default class P2cProgressComponent extends LightningElement {
-    @api progressPercentage;
-
+  @api progressPercentage;
 }

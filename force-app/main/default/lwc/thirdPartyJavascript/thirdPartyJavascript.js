@@ -25,6 +25,6 @@ export default class ThirdPartyJavascript extends LightningElement {
   currentDate;
 
   showDateOnScreen() {
-    this.currentDate = MOMENT().format("LLLL");
+    this.currentDate = moment().format("LLLL");
   }
 }
