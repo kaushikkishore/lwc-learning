@@ -1,0 +1,37 @@
+<template>
+    <!-- MAKE SURE you add inline CSS to work with. -->
+    <lightning-card title="PDF Generation">
+        <div class="slds-var-m-around_medium pdfDocument">
+            <img src={imageURL} alt="random-image" />
+            <div>
+                <div>Invoice number {invoiceData.invoiceNumber}</div>
+                <div>Invoice created {invoiceData.invoiceCreated}</div>
+                <div>Invoice due date {invoiceData.invoiceDue}</div>
+                <div>Invoice company name {invoiceData.companyName}</div>
+                <div>Invoice address line 1 {invoiceData.address1}</div>
+                <div>Invoice address line 2 {invoiceData.address2}</div>
+            </div>
+
+            <div>
+                <div>client name {clientData.client}</div>
+                <div>client username {clientData.username}</div>
+                <div>client email {clientData.email}</div>
+            </div>
+
+            <template for:each={services} for:item="service">
+                <div key={service.name}>
+                    <div>Service name {service.name}</div>
+                    <div>Cost in USD {service.amount}</div>
+                </div>
+            </template>
+
+            <div>Total service cost $ {totalCost} </div>
+
+
+        </div>
+
+        <lightning-button variant="brand" label="Download invoice" onclick={downloadPdf}>
+        </lightning-button>
+
+    </lightning-card>
+</template>
