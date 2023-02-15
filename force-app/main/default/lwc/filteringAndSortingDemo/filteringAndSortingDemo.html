@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Client side filtering">
+        <div class="slds-var-m-around_medium">
+            <lightning-layout>
+                <lightning-layout-item size="4" padding="around-medium">
+                    <lightning-input type="text" label="Search contacts" value={search} onkeyup={handleSearch}>
+
+                    </lightning-input>
+                </lightning-layout-item>
+            </lightning-layout>
+            <table>
+                <thead>
+                    <tr>
+                        <template for:each={headings} for:item="header">
+                            <th key={header}>{header}</th>
+                        </template>
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <template for:each={filteredContacts} for:item="contact">
+                        <tr key={contact.Id}>
+                            <td>{contact.Id}</td>
+                            <td>{contact.Name}</td>
+                            <td>{contact.Title}</td>
+                            <td>{contact.Email}</td>
+                        </tr>
+
+                    </template>
+
+                </tbody>
+            </table>
+        </div>
+    </lightning-card>
+</template>
